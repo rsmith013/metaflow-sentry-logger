@@ -35,10 +35,10 @@ The sentry plugin can be called using either the `--with sentry` command line ar
 
 Only basic configuration is currently supported using environment variables.
 
-| Envrionment Variable | Description                                       | Required |
-| -------------------- | ------------------------------------------------- | -------- |
-| `SENTRY_DSN`         | The DSN for the target sentry project             | `True`   |
-| `METAFLOW_PROFILE`   | Used by this plugin to determine the environment. | `False`  |
+| Name                  | Description                                       | Required | Location                                 |
+| --------------------- | ------------------------------------------------- | -------- | ---------------------------------------- |
+| `METAFLOW_SENTRY_DSN` | The DSN for the target sentry project             | `True`   | `Environment Variable` `Metaflow Config` |
+| `METAFLOW_PROFILE`    | Used by this plugin to determine the environment. | `False`  | `Environment Variable`                   |
 
 ## Examples
 
