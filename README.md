@@ -1,3 +1,5 @@
+[![PyPI version](https://badge.fury.io/py/metaflow-sentry-logger.svg)](https://badge.fury.io/py/metaflow-sentry-logger)
+
 # Sentry Logging Plugin for Metaflow
 
 Enabling the use of [Sentry](https://sentry.io/) with [Metaflow](https://metaflow.org/)
