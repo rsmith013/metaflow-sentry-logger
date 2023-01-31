@@ -3,6 +3,7 @@ import os
 
 import sentry_sdk
 from metaflow import decorators
+from metaflow_extensions.sentry.config.metaflow_config import SENTRY_DSN
 
 logger = logging.getLogger(__name__)
 
@@ -10,6 +11,16 @@ logger = logging.getLogger(__name__)
 class SentryLoggingStepDecorator(decorators.StepDecorator):
 
     name = "sentry"
+
+    def step_init(
+        self, flow, graph, step_name, decorators, environment, flow_datastore, logger
+    ):
+        if not SENTRY_DSN:
+            msg = (
+                "You have requested the sentry logging decorator "
+                "without setting the METAFLOW_SENTRY_DSN configuration value."
+            )
+            raise ValueError(msg)
 
     def task_pre_step(
         self,
@@ -25,15 +36,9 @@ class SentryLoggingStepDecorator(decorators.StepDecorator):
         ubf_context,
         inputs,
     ):
-        if not (sentry_dsn := os.environ.get("SENTRY_DSN")):
-            msg = (
-                "You have requested the sentry logging decorator "
-                "without setting SENTRY_DSN environment variable"
-            )
-            raise ValueError(msg)
 
         sentry_sdk.init(
-            dsn=sentry_dsn,
+            dsn=SENTRY_DSN,
             environment=os.environ.get("METAFLOW_PROFILE"),
         )
 
