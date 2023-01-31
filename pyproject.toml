@@ -1,0 +1,42 @@
+[build-system]
+requires      = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "metaflow-sentry-logger"
+version= "0.1.0"
+description="Sentry logging plugins for Metaflow (metaflow.org)"
+readme="README.md"
+authors=[{name = "Richard Smith"}]
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+]
+keywords = ["metaflow"]
+dependencies = [
+    "sentry-sdk",
+    "metaflow",
+]
+requires-python= ">=3.9"
+
+[project.optional-dependencies]
+dev = ["pip-tools", "pytest", "bumpver", "pre-commit"]
+
+[project.entry-points.metaflow_extensions]
+metaflow_extensions = "metaflow_extensions"
+
+[project.urls]
+Homepage = "https://github.com/rsmith013/metaflow-sentry-logger"
+
+[tool.bumpver]
+current_version = "0.1.0"
+version_pattern = "MAJOR.MINOR.PATCH"
+commit_message  = "Bump version {old_version} -> {new_version}"
+commit          = true
+tag             = false
+push            = false
+
+[tool.bumpver.file_patterns]
+"pyproject.toml" = ['current_version = "{version}"', 'version = "{version}"']
+"metaflow_extensions/sentry/toplevel/sentry_toplevel.py" = ["{version}"]
