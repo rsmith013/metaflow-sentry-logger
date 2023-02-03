@@ -1,4 +1,5 @@
 [![PyPI version](https://badge.fury.io/py/metaflow-sentry-logger.svg)](https://badge.fury.io/py/metaflow-sentry-logger)
+[![Tests](https://github.com/rsmith013/metaflow-sentry-logger/actions/workflows/tests.yaml/badge.svg)](https://github.com/rsmith013/metaflow-sentry-logger/actions/workflows/tests.yaml)
 
 # Sentry Logging Plugin for Metaflow
 
