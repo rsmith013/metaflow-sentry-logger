@@ -31,6 +31,8 @@ jobs:
           with:
             python-version: ${{ matrix.python-version }}
         - name: Install dependencies
-          run: pip install -r requirements.txt . metaflow==${{matrix.metaflow-version}}
+          run: pip install -r requirements.txt .
+        - name: Install specific metaflow version for test
+          run: pip install metaflow==${{matrix.metaflow-version}}
         - name: Run tests
           run: pytest tests/
