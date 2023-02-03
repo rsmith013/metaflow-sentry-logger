@@ -16,7 +16,7 @@ classifiers = [
 keywords = ["metaflow"]
 dependencies = [
     "sentry-sdk",
-    "metaflow",
+    "metaflow<2.7.20",
 ]
 requires-python= ">=3.7"
 

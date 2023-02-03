@@ -1,3 +1,6 @@
+"""
+Example Metaflow flow which demonstrates use of the sentry step decorator.
+"""
 from metaflow import FlowSpec, sentry, step
 
 
