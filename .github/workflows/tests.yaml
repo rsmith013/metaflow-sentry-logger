@@ -1,7 +1,12 @@
 name: Tests
 
 on:
-  pull_request
+  pull_request:
+  push:
+    branches:
+      - 'main'
+    paths:
+      - '**.py'
 
 jobs:
   lint:
@@ -21,7 +26,6 @@ jobs:
         matrix:
           python-version:
             - '3.8'
-            - '3.9'
           metaflow-version:
             - '2.7.18'
             - '2.7.19'
