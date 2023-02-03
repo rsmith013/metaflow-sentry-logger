@@ -1,8 +1,13 @@
 [![PyPI version](https://badge.fury.io/py/metaflow-sentry-logger.svg)](https://badge.fury.io/py/metaflow-sentry-logger)
+[![Tests](https://github.com/rsmith013/metaflow-sentry-logger/actions/workflows/tests.yaml/badge.svg)](https://github.com/rsmith013/metaflow-sentry-logger/actions/workflows/tests.yaml)
 
 # Sentry Logging Plugin for Metaflow
 
 Enabling the use of [Sentry](https://sentry.io/) with [Metaflow](https://metaflow.org/)
+
+***
+**This repo relies on the unsupported extensions API and was built against metaflow==2.7.18. The extensions API was changed in [metaflow==2.7.20](https://github.com/Netflix/metaflow/releases/tag/2.7.20)**
+***
 
 
 - [Sentry Logging Plugin for Metaflow](#sentry-logging-plugin-for-metaflow)

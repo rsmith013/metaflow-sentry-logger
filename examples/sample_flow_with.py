@@ -1,7 +1,12 @@
+"""
+Example metaflow flow which is intended to be used with the --with cli argument
+to demonstrate sentry integration.
+"""
+
 from metaflow import FlowSpec, step
 
 
-class MyFlow(FlowSpec):
+class MyFlowWith(FlowSpec):
     @step
     def start(self):
         print("Start step")
@@ -20,4 +25,4 @@ class MyFlow(FlowSpec):
 
 
 if __name__ == "__main__":
-    MyFlow()
+    MyFlowWith()
