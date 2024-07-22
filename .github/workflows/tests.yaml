@@ -27,8 +27,7 @@ jobs:
           python-version:
             - '3.8'
           metaflow-version:
-            - '2.7.18'
-            - '2.7.19'
+            - '2.12.8'
       steps:
         - uses: actions/checkout@v2
         - uses: actions/setup-python@v4

@@ -1,2 +1,2 @@
-metaflow==2.7.18
+metaflow==2.12.8
 sentry-sdk
