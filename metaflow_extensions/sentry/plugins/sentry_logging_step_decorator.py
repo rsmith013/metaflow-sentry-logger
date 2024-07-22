@@ -2,8 +2,9 @@ import logging
 import os
 
 import sentry_sdk
+
 from metaflow import decorators
-from metaflow_extensions.sentry.config.metaflow_config import SENTRY_DSN
+from metaflow.metaflow_config import SENTRY_DSN
 
 logger = logging.getLogger(__name__)
 

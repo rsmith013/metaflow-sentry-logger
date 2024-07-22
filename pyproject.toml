@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "metaflow-sentry-logger"
-version = "0.2.1"
+version = "1.0.0"
 description="Sentry logging plugins for Metaflow (metaflow.org)"
 readme="README.md"
 authors=[{name = "Richard Smith"}]
@@ -16,7 +16,7 @@ classifiers = [
 keywords = ["metaflow"]
 dependencies = [
     "sentry-sdk",
-    "metaflow<2.7.20",
+    "metaflow<=2.12.8",
 ]
 requires-python= ">=3.7"
 
@@ -30,7 +30,7 @@ metaflow_extensions = "metaflow_extensions"
 Homepage = "https://github.com/rsmith013/metaflow-sentry-logger"
 
 [tool.bumpver]
-current_version = "0.2.1"
+current_version = "1.0.0"
 version_pattern = "MAJOR.MINOR.PATCH"
 commit_message  = "Bump version {old_version} -> {new_version}"
 commit          = true
